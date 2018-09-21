@@ -1,0 +1,6 @@
+Scanner input = new Scanner(System.in);
+		String road = input.nextLine();
+		
+		FileInputStream file = new FileInputStream(road);
+		InputStreamReader isr = new InputStreamReader(file);
+		BufferedReader br = new BufferedReader(isr);//使用缓冲区，可以使用缓冲区的read(),readLine()方法；

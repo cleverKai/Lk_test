@@ -1,0 +1,42 @@
+package No1;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+public class Read {
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		try {
+			FileReader file = new FileReader("data/world.txt");
+			BufferedReader br = new BufferedReader(file);
+			HashMap<String, Integer> map = new HashMap<String, Integer>();
+			String string =null;
+			Integer  count = 0;
+			Integer  total = 0;
+			while ((string=br.readLine()) != null) {
+				char[] ch = string.toCharArray();
+				total = total + ch.length;
+				for (int i = 0; i < ch.length; i++) {
+					ch[i] = Character.toLowerCase(ch[i]);
+					count = map.get(ch[i]+"");
+					if (count == null) {
+						count = 1;
+					}else {
+						count++;
+					}
+					map.put(ch[i]+"", count);
+				}
+			}
+			for (String str : map.keySet()) {
+				System.out.println(str+":"+map.get(str));
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	} 
+
+}
+

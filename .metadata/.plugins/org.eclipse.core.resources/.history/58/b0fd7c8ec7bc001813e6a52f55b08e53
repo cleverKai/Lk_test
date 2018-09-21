@@ -1,0 +1,13 @@
+package com.zuoye.cn;
+
+public class WC {
+
+	public static void main(String[] args) {
+		while(true){
+			System.out.println("操作说明：");
+			
+		}
+
+	}
+
+}

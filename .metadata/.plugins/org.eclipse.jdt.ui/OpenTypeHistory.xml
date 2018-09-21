@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=mvcproject/D:\/Program Files\/Java\/jdk1.8.0_121\/jre\/lib\/rt.jar&lt;org.omg.PortableInterceptor(USER_EXCEPTION.class[USER_EXCEPTION" modifiers="1537" timestamp="1488274270299"/>
+<typeInfo handle="=mvcproject/src&lt;cn.mvcproject.utils{JdbcUtils.java[JdbcUtils" modifiers="1" timestamp="1536753221131"/>
+<typeInfo handle="=mvcproject/src&lt;cn.mvcproject.dao{UserDao.java[UserDao" modifiers="513" timestamp="1536998438862"/>
+<typeInfo handle="=mvcproject/D:\/Program Files\/Java\/jdk1.8.0_121\/jre\/lib\/rt.jar&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1488274270299"/>
+<typeInfo handle="=mvcproject/src&lt;cn.mvcproject.dao{UserDaoImpl.java[UserDaoImpl" modifiers="1" timestamp="1537274950131"/>
+</typeInfoHistroy>

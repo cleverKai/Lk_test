@@ -1,0 +1,27 @@
+package com.zuoye.cn;
+
+import java.util.Scanner;
+
+public class WC {
+
+	public static void main(String[] args) {
+		while(true){
+			System.out.println("操作说明：");
+			System.out.println("wc.exe -c  返回文件 file.c 的字符数");
+			System.out.println("wc.exe -w  返回文件 file.c 的词的数目");
+			System.out.println("wc.exe -l  返回文件 file.c 的行数");
+			System.out.println("wc.exe -a  返回文件 file.c 的空行，代码行，注释行");
+			System.out.println("请输入指令：");
+			Scanner scanner = new Scanner(System.in);
+			String str = scanner.nextLine();
+			swith(str){
+				case ="-l":
+				lineCount line = new lineCount();
+				break;
+				
+			}
+		}
+
+	}
+
+}

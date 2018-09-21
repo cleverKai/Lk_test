@@ -1,0 +1,97 @@
+package com.zuoye.cn;
+import java.io.FileInputStream;
+import java.util.Scanner;
+/*
+* InputStreamReader(new FileInputStream(绝对文件名))进行文件的读取
+* BufferedReader(文件读取)调用readLine()的方法
+* InputStreamReader(new FileInputStream(绝对文件名))进行文件的读取
+* BufferedReader(文件读取)调用readLine()的方法
+*/
+public class updateFileCount {
+ 	public static void main1(String[] args) throws Exception {
+		
+		System.out.println("WC功能：");
+		System.out.println("统计文件的字符数");
+		System.out.println("统计文件的单词数");
+		System.out.println("统计文件的行数");
+		System.out.println("统计更复杂的数据（代码行 / 空行 / 注释行）");
+		System.out.println("——————————————————————————————————");
+		System.out.println("请输入文件路径及文件名：");
+		System.out.println("WC功能：");
+		System.out.println("-c统计文件的字符数");
+		System.out.println("-w统计文件的单词数");
+		System.out.println("-l统计文件的行数");
+		System.out.println("-a统计文件更复杂的数据（代码行 / 空行 / 注释行）");
+		System.out.println("-all统计文件的所有信息");
+		System.out.println("——————————————————————————————————");
+		System.out.println("请输入文件路径及文件名：");
+		
+		Scanner input = new Scanner(System.in);
+		String road = input.nextLine();
+		String array[] = road.split("\\s");
+		
+		FileInputStream file = new FileInputStream(road);
+		FileInputStream file = new FileInputStream(array[1]);
+		InputStreamReader isr = new InputStreamReader(file);
+		BufferedReader br = new BufferedReader(isr);//使用缓冲区，可以使用缓冲区的read(),readLine()方法；
+		BufferedReader br = new BufferedReader(isr);//使用缓冲区，可以使用缓冲区的read(),readLine()方法；
+		
+		int Charcount = 0;
+		int Wordcount = 0;
+@@ -43,30 +45,46 @@ public static void main(String[] args) throws Exception {
+	    while(br.read()!=-1)
+		  {
+	    	String s = br.readLine();
+	    	  if (s.length() <= 1) // 判断空行
+	    	  if (s.length() <= 1) // 判断空行
+			   { 
+	               BlankLine++;
+		    	
+			  } 
+	    	  else 
+	    	  {
+		   Charcount += s.length();//字符个数就是字符长度
+		   Wordcount += s.split(" ").length;//split() 方法用于把一个字符串分割成字符串数组,字符串数组的长度，就是单词个数
+		   CodeLine++;//因为是按行读取，所以每次增加一即可计算出行的数目
+		   Charcount += s.length();//字符个数就是字符长度
+		   Wordcount += s.split(" ").length;//split() 方法用于把一个字符串分割成字符串数组,字符串数组的长度，就是单词个数
+		   CodeLine++;//因为是按行读取，所以每次增加一即可计算出行的数目
+	    	  }
+	    	  Linecount = CodeLine + BlankLine ;
+		   }
+	  
+	    
+	    isr.close();//关闭文件
+	    isr.close();//关闭文件
+	    System.out.println("字符数 "+Charcount);
+	    System.out.println("单词数 "+Wordcount );
+	    System.out.println("代码行数 "+CodeLine); 
+	    System.out.println("注释行数：未实现");
+	    System.out.println("空白行数 "+BlankLine); 
+	    System.out.println("总行数 "+Linecount); 
+	   switch(array[0])
+	    {
+	    case "-c": System.out.println("字符数 "+Charcount);
+	    			break;
+	    case "-w": System.out.println("单词数 "+Wordcount);
+	    			break;
+	    case "-l": System.out.println("总行数 "+Linecount);
+	    			break;
+	    case "-a": System.out.println("代码行数 "+CodeLine); 
+	               System.out.println("注释行数：未实现");
+	               System.out.println("空白行数 "+BlankLine);	               
+	               break;
+	    case "-all":System.out.println("字符数 "+Charcount);
+	                System.out.println("单词数 "+Wordcount );
+	                System.out.println("代码行数 "+CodeLine); 
+	                System.out.println("注释行数：未实现");
+	                System.out.println("空白行数 "+BlankLine); 
+	                System.out.println("总行数 "+Linecount); 
+	                break;
+	    
+	    default:
+           System.out.println("参数输入不正确");
+	  }	    
+	    }
+	   
+	}

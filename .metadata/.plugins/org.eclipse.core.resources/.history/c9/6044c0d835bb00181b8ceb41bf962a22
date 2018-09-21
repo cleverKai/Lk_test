@@ -1,0 +1,28 @@
+package No1;
+import java.io.BufferedReader;
+import java.io.FileReader;
+/**
+*
+* @author xueliang
+*/
+public class ReadFile {
+public static void main(String[] args) {
+int lines = 0 ;
+int words = 0;
+try {
+FileReader reader = new FileReader("c:\\seol.txt");
+BufferedReader br = new BufferedReader(reader);
+String temp;
+while ((temp = br.readLine())!=null) {
+lines++;
+String[] split = temp.split(" ");
+words += split.length;
+}
+} catch (Exception e) {
+e.printStackTrace();
+}
+System.out.println("有" + lines + "行");
+System.out.println("有" + words + "个单词");
+}
+}
+ 0

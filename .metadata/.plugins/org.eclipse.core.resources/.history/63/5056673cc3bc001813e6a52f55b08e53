@@ -1,0 +1,11 @@
+package com.zuoye.cn;
+private final Result result;
+public CharCheck(Result result) {
+    this.result = result;
+}
+
+@Override
+public void check(String s) {
+    result.addCharLine(s.length());
+}
+}

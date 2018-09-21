@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE xml>
+<c3p0-config>
+    <!-- 命名的配置 -->
+    <named-config name="mysql"><!--这里是设置配置文件的名字-->
+    <!-- 连接数据库mysql的基本的必须的配置 -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/mvcproject?zeroDateTimeBehavior=convertToNull</property>
+        <property name="user">root</property><!--mysql的登陆名-->
+        <property name="password">123</property><!--如果没密码就可以设置成<property name="password"></property>-->
+        
+        <property name="acquireIncrement">5</property><!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="initialPoolSize">10</property><!-- 初始化数据库连接池连接的对象 -->
+        <property name="minPoolSize">5</property>
+        <property name="maxPoolSize">100</property>
+        <property name="maxStatements">2</property>
+        <property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
+    </named-config>
+</c3p0-config>
