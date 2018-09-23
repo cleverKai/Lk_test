@@ -16,7 +16,6 @@ public class wcCount {
 		int charnum = 0; // 字符数
 		int wordnum = 0; // 单词数
 		int linenum = 0; // 行数
-		while(true){
 		System.out.println(" -c  + 文件路径  返回文件的字符数");
 		System.out.println(" -w  + 文件路径  返回文件词的数目");
 		System.out.println(" -l  + 文件路径  返回文件的行数");
@@ -112,7 +111,6 @@ public class wcCount {
 	      }
 	 }
      }
- }
 
 	
 
